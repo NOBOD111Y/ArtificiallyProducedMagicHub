@@ -11,6 +11,6 @@ Luaarmor is shit, i hate people who use luraph to obfuscate their scripts.
 This script will NEVER be obfuscated, even if people are telling you so.
 (even betas won't be obfuscated!!!!)
 
-``` luau
-loadstringxd
+``` lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NOBOD111Y/ArtificiallyProducedMagicHub/refs/heads/main/APMH.lua"))()
 ```
