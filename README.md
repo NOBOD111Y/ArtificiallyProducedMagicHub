@@ -2,7 +2,7 @@
 
 This is the new meta for power giving in Elemental Powers Tycoon.
 
-I might add more to this since this is only in 1.0..
+I might add more to this since this is only in 1.1..
 This will have public betas... so get ready!
 ## The loadstring and stuff!!!!
 
