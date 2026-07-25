@@ -1,2 +1,16 @@
-# ArtificiallyProducedMagicHub
-KAUCJOMAT!!!!!!
+# Artificially Produced Magic Hub
+
+This is the new meta for power giving in Elemental Powers Tycoon.
+
+I might add more to this since this is only in 1.0..
+This will have public betas... so get ready!
+## The loadstring and stuff!!!!
+
+We all need it. We don't wanna write it ourselves.
+Luaarmor is shit, i hate people who use luraph to obfuscate their scripts.
+This script will NEVER be obfuscated, even if people are telling you so.
+(even betas won't be obfuscated!!!!)
+
+``` luau
+loadstringxd
+```
