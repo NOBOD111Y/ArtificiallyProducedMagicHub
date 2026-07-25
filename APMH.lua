@@ -1,6 +1,6 @@
--- had to use gui2lua
+-- huge thanks to @uniquadev for making the gui2lua converter
 
--- Instances: 10 | Scripts: 1 | Modules: 0 | Tags: 0
+-- Instances: 11 | Scripts: 2 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.GiverGUI
@@ -114,10 +114,15 @@ G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["a"]["BackgroundTransparency"] = 1;
-G2L["a"]["Size"] = UDim2.new(0, 500, 0, 21);
+G2L["a"]["Size"] = UDim2.new(0, 521, 0, 21);
 G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[Artificially Produced Magic Hub - Elemental Powers Tycoon [APMH] (v1.0)]];
+G2L["a"]["Text"] = [[Artificially Produced Magic Hub - Elemental Powers Tycoon [APMH] (v1.1) (ooops build)]];
 G2L["a"]["Name"] = [[text]];
+
+
+-- StarterGui.GiverGUI.topbar.DragSystem
+G2L["b"] = Instance.new("LocalScript", G2L["9"]);
+G2L["b"]["Name"] = [[DragSystem]];
 
 
 -- StarterGui.GiverGUI.main.givethething.TheButtonWhereYouActuallyDoTheGivingToSelf.LocalScript
@@ -130,11 +135,52 @@ local script = G2L["5"];
 	button.MouseButton1Click:Connect(function()
 		local powerthatiwannagive = textBox.Text
 		print("Debug: User entered: " .. powerthatiwannagive)
+		local Event = game:GetService("ReplicatedStorage").RemoteEvent
 		Event:FireServer(
-		"equip_mystery_spell", -- tricks the game into thinking we are opening the mystery box and getting the power from it, therefore the server says "Yeah! This is legit! Give the power!"
-			powerthatiwannagive, -- the power that the user wants to give themselves
-	end
+			"equip_mystery_spell",
+			powerthatiwannagive
+		)
+	end)
 end;
 task.spawn(C_5);
+-- StarterGui.GiverGUI.topbar.DragSystem
+local function C_b()
+local script = G2L["b"];
+	local topbar = script.Parent
+	local gui = topbar.Parent
+	local main = gui:FindFirstChild("main")
+	local UserInputService = game:GetService("UserInputService")
+	
+	topbar.Active = true
+	
+	local dragging = false
+	local dragStart, startPosTopbar, startPosMain
+	
+	topbar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPosTopbar = topbar.Position
+			startPosMain = main and main.Position or nil
+		end
+	end)
+	
+	topbar.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = false
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			local delta = input.Position - dragStart
+			topbar.Position = startPosTopbar + UDim2.new(0, delta.X, 0, delta.Y)
+			if main then
+				main.Position = startPosMain + UDim2.new(0, delta.X, 0, delta.Y)
+			end
+		end
+	end)
+end;
+task.spawn(C_b);
 
 return G2L["1"], require;
