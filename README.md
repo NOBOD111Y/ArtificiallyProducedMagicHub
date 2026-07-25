@@ -7,7 +7,7 @@ This will have public betas... so get ready!
 ## The loadstring and stuff!!!!
 
 We all need it. We don't wanna write it ourselves.
-Luaarmor is shit, i hate people who use luraph to obfuscate their scripts.
+Lua Armor is shit, i hate people who use luraph to obfuscate their scripts.
 This script will NEVER be obfuscated, even if people are telling you so.
 (even betas won't be obfuscated!!!!)
 
