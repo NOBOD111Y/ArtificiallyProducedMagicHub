@@ -14,3 +14,4 @@ This script will NEVER be obfuscated, even if people are telling you so.
 ``` lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NOBOD111Y/ArtificiallyProducedMagicHub/refs/heads/main/APMH.lua"))()
 ```
+This has no death persistence, i'll add it.
