@@ -1,3 +1,4 @@
+this is broken as hecc... im working on an update, everything is messed up
 # Artificially Produced Magic Hub
 (or in short, APMH)
 
