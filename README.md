@@ -46,6 +46,8 @@ using scripting (Including ME!) so i'm gonna tell you how to export it to roblox
 And that's how!!!!!
 Maybe you can improve the gui, add more features, etc.
 
-## i'll add more of these sections soon
+## How to regui2lua
 
-So, hope you'll have a great time using/editing the script!
+You're confused how to regui2lua right? Well get this
+plugin! It will make things easier.
+https://create.roblox.com/store/asset/10139235293/Gui-To-Lua-Converter
