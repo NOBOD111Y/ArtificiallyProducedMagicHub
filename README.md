@@ -85,6 +85,6 @@ Maybe you can improve the gui, add more features, etc.
 
 ## How to regui2lua
 
-You're confused how to regui2lua right? Well get this
-plugin! It will make things easier.
+You're confused how to regui2lua right? Well get this plugin!
+It will make things easier.
 https://create.roblox.com/store/asset/10139235293/Gui-To-Lua-Converter
