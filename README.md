@@ -24,7 +24,7 @@ This script will NEVER be obfuscated, even if people are telling you so.
 (even betas won't be obfuscated!!!!)
 
 ``` lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NOBOD111Y/ArtificiallyProducedMagicHub/refs/heads/main/APMH.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NOBOD111Y/ArtificiallyProducedMagicHub/refs/heads/main/APMH.luau"))()
 ```
 
 Yeah. Enjoy!
