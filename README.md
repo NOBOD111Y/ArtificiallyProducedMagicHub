@@ -44,6 +44,10 @@ using scripting (Including ME!) so i'm gonna tell you how to export it to roblox
 
 6. Paste it into StarterGui.
 
+7. Now you have the gui, all that's left is to get the respective scripts and place them in their place.
+
+
+
 And that's how!!!!!
 Maybe you can improve the gui, add more features, etc.
 
