@@ -46,6 +46,28 @@ using scripting (Including ME!) so i'm gonna tell you how to export it to roblox
 
 7. Now you have the gui, all that's left is to get the respective scripts and place them in their place.
 
+Find stuff like this.
+
+``` lua
+-- StarterGui.GiverGUI.main.givethething.TheButtonWhereYouActuallyDoTheGivingToSelf.LocalScript   < Look for this
+local function C_5()    < REMOVE
+local script = G2L["5"];    < REMOVE
+	-- This script is for the button that is used to give the power to the player.
+	local button = script.Parent
+	local textBox = script.Parent.Parent.TheBoxWhereYourAssGivesPowersArtificially
+	
+	button.MouseButton1Click:Connect(function()
+		local powerthatiwannagive = textBox.Text
+		print("Debug: User entered: " .. powerthatiwannagive)
+		local Event = game:GetService("ReplicatedStorage").RemoteEvent
+		Event:FireServer(
+			"equip_mystery_spell",
+			powerthatiwannagive
+		)
+	end)
+end;
+```
+
 
 
 And that's how!!!!!
